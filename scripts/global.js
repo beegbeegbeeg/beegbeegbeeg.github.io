@@ -9,12 +9,14 @@ const deflation = 100;
 const playerStroke = 20;
 const enemyRadius = 5;
 const enemyStroke = 10;
-
 //variables
 let timerValue = defaultTimerValue;
 let currentScore = 0;
 let highScore = 0;
 let foodValue = 50;
+let deltaTime =new Date();
+let newStamp = new Date();
+let prevStamp = new Date();
 //html elements
 let gameSound = document.getElementById('gameSound');
 let tryAgainButton = document.getElementById('tryAgainButton');

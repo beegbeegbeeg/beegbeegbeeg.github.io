@@ -54,8 +54,8 @@ window.addEventListener('keyup', function (event) {
 });
 
 const movement = (prev) => {
-    const increment = 0.1;
-    const max = 2;
+    const increment = 0.005;
+    const max = 0.1;
 
     
     res = {};

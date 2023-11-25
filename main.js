@@ -3,21 +3,24 @@ spawnEnemy();
 
 function animate() {
   //playing the game
-  if(playing()){
+  if (playing()) {
     move = movement(move);
-    player.translate.x += move.x;
-    player.translate.y += move.y;
+    newStamp = new Date();
+    deltaTime = newStamp - prevStamp;
+    prevStamp = newStamp;
+    player.translate.x += move.x * deltaTime;
+    player.translate.y += move.y * deltaTime;
     updateScore(move, player.translate);
     eatEnemy()
   }
   //ded
-  else{
+  else {
     clearInterval(timerInterval);
     showTryAgainButton();
   }
-  
+
   illo.updateRenderGraph();
-  requestAnimationFrame( animate );
+  requestAnimationFrame(animate);
 }
 animate();
 
