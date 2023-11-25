@@ -1,16 +1,7 @@
 let isSpinning = true;
-
 let illo = new Zdog.Illustration({
   element: '.zdog-canvas',
-  dragRotate: true,
-  // stop spinning when drag starts
-  onDragStart: function() {
-    isSpinning = false;
-  },
-  //start again when drag stops
-  onDragEnd: function() {
-    isSpinning = true;
-  },
+  resize: 'fullscreen',
 });
 
 // circle
@@ -22,20 +13,14 @@ let circle = new Zdog.Ellipse({
   color: '#636',
 });
 
-// square
-let square = new Zdog.Rect({
-  addTo: illo,
-  width: 80,
-  height: 80,
-  translate: { z: -40 },
-  stroke: 12,
-  color: '#E62',
-  fill: true,
-});
-
+var move = {x:0, y:0};
 function animate() {
-  illo.rotate.y += isSpinning ? 0.03 : 0;
+  move = movement(move);
+  circle.translate.x += move.x;
+  circle.translate.y += move.y;
   illo.updateRenderGraph();
   requestAnimationFrame( animate );
 }
 animate();
+
+
