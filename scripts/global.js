@@ -40,7 +40,6 @@ let player = new Zdog.Ellipse({
 let arena = new Zdog.Ellipse({
   addTo: illo,
   diameter: 2*ringRadius,
-  translate: { z: 40 },
   stroke: playerStroke,
   color: '#F36',
 });
