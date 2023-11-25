@@ -67,7 +67,7 @@ function tryAgain() {
   resetTimer();
   spawnEnemy();
   currentScore = 0;
-  foodValue = foodIncrement;
+
 
   // Hide the button
   tryAgainButton.classList.add('hidden');
@@ -96,8 +96,6 @@ function playCoinSound() {
 
     // Set currentTime to 0 to ensure the sound starts from the beginning
     newSound.currentTime = 0;
-
-    newSound.volume = 0.01;
 
     // Play the new sound instance
     newSound.play();
