@@ -81,8 +81,8 @@ function resetEnemy() {
 
 function spawnEnemy() {
   do {
-    x = Math.floor(Math.random() * (ringRadius-2*playerStroke));
-    y = Math.floor(Math.random() * (ringRadius-2*playerStroke));
+    x = Math.floor(Math.random() *2* (ringRadius-2*playerStroke) -(ringRadius-2*playerStroke));
+    y = Math.floor(Math.random() *2* (ringRadius-2*playerStroke) -(ringRadius-2*playerStroke));
   } while (x * x + y * y >= (ringRadius-2*playerStroke) * (ringRadius-2*playerStroke))
 
   enemy.translate.x = x;
