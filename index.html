@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
-    <title>Its BEEG o'clock</title>
+    <title>Its BEEG Time</title>
 </head>
 <body>
+    <div id="overlay" class="hidden">
+        <div id="tryAgainButton" class="hidden">
+            <button onclick="tryAgain()">Try again</button>
+            </div>
+        </div>
+    <div id="scores">
+        <div id="score">Score: <span id="currentScore">0</span></div>
+        <div id="highscore">High Score: <span id="highScore">0</span></div>
+    </div>
     <canvas class="zdog-canvas"></canvas>
     <script src="scripts/playerMovement.js"></script>
+    <script src="scripts/sceneControls.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
