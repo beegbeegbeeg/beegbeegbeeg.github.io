@@ -18,8 +18,7 @@ function animate() {
   
   illo.updateRenderGraph();
   
-  illo.rotate.x += 0.002;
-  illo.rotate.y += 0.003;
+  illo.rotate.x += 0.01;
   requestAnimationFrame( animate );
 }
 animate();
