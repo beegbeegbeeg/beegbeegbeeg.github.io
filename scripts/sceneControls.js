@@ -10,6 +10,7 @@ function updateHighScore() {
 }
 
 function showTryAgainButton() {
+  overlay.classList.remove('hidden');
   tryAgainButton.classList.remove('hidden');
 }
 function addScore() {
@@ -66,6 +67,7 @@ function tryAgain() {
 
   // Hide the button
   tryAgainButton.classList.add('hidden');
+  overlay.classList.add('hidden');
 }
 
 function yeetEnemy() {

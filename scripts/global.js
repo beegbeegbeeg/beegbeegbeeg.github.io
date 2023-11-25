@@ -1,7 +1,7 @@
 //constants
 const ringRadius = 200;
-const foodIncrement = 200;
-const foodTime = 5;
+const foodIncrement = 50;
+const foodTime = 2;
 const playerRadius = 20;
 const defaultTimerValue = 15;
 const timeIncrement = 2;
@@ -18,6 +18,7 @@ let foodValue = 50;
 //html elements
 let gameSound = document.getElementById('gameSound');
 let tryAgainButton = document.getElementById('tryAgainButton');
+let overlay = document.getElementById('overlay');
 //arrays
 // enemies = document.createElement("enemies");
 
@@ -25,7 +26,6 @@ let tryAgainButton = document.getElementById('tryAgainButton');
 var move = {x:0, y:0};
 let illo = new Zdog.Illustration({
   element: '.zdog-canvas',
-  // dragRotate: true,
   resize: 'fullscreen',
 });
 
@@ -40,6 +40,7 @@ let player = new Zdog.Ellipse({
 let arena = new Zdog.Ellipse({
   addTo: illo,
   diameter: 2*ringRadius,
+  translate: { z: 40 },
   stroke: playerStroke,
   color: '#F36',
 });
