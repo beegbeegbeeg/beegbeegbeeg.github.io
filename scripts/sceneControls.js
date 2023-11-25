@@ -50,18 +50,13 @@ function playing(){
   return true;  
 }
 
-function resetPlayer(){
-
+// Function to reset the game
+function tryAgain() {
+  // Reset position and scores
   player.translate.x = 0;
   player.translate.y = 0;
   move.x = 0;
   move.y = 0;
-}
-
-// Function to reset the game
-function tryAgain() {
-  // Reset position and scores
-  resetPlayer();
   if (highScore < currentScore) highScore = currentScore;
   updateHighScore();
   resetTimer();
@@ -107,7 +102,6 @@ function eatEnemy() {
     addTime();
     addScore();
     playCoinSound();
-    resetPlayer();
   }
 }
 
